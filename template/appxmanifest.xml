@@ -3,14 +3,14 @@
    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
-  <Identity Name="${packageName}"
+  <Identity Name="${identityName}"
     ProcessorArchitecture="x64"
     Publisher="${publisherName}"
     Version="${packageVersion}" />
   <Properties>
     <DisplayName>${packageDisplayName}</DisplayName>
-    <PublisherDisplayName>Reserved</PublisherDisplayName>
-    <Description>No description entered</Description>
+    <PublisherDisplayName>${publisherDisplayName}</PublisherDisplayName>
+    <Description>${packageDescription}</Description>
     <Logo>assets\SampleAppx.50x50.png</Logo>
   </Properties>
   <Resources>
@@ -23,7 +23,7 @@
     <rescap:Capability Name="runFullTrust"/>
   </Capabilities>
   <Applications>
-    <Application Id="${packageName}" Executable="${packageExecutable}" EntryPoint="Windows.FullTrustApplication">
+    <Application Id="${applicationId}" Executable="${packageExecutable}" EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements
        BackgroundColor="${packageBackgroundColor}"
        DisplayName="${packageDisplayName}"
